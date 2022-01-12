@@ -21,9 +21,8 @@ class ParticleData(HouseInfo):
 
     def get_data_concentrations(self, data):
         particulate = {'good': 0, 'moderate': 0, 'bad': 0}
-        sarasa = [float(x['particulate']) for x in data]
 
-        for rec in sarasa:
+        for rec in data:
             if rec <= 50:
                 particulate['good'] += 1
             elif rec <= 100:
